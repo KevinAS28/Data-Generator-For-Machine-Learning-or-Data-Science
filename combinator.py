@@ -4,7 +4,8 @@ class linked_node:
 	data0 = 0
 	the_max = 0
 	initialized = False
-	def __init__(self, data0=0, the_max=10, the_next=None):
+	
+	def __init__(self, the_max=10, data0=0, the_next=None):
 		self.the_next = the_next
 		self.data0 = data0
 		self.the_max = the_max
@@ -21,11 +22,11 @@ class linked_node:
 class linked_list:
 	data = None
 	temp = 0
-	def __init__(self, size):
-		self.data = linked_node()
+	def __init__(self, size, base_num=10):
+		self.data = linked_node(base_num)
 		current = self.data
 		for i in range(size-1):
-			current.the_next = linked_node()
+			current.the_next = linked_node(base_num)
 			current = current.the_next
 	def base_loop(self, function):
 		current = self.data
