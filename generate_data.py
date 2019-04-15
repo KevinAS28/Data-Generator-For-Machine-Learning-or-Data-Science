@@ -60,7 +60,7 @@ def main():
 				i = internet_pos[int(combination[3])]
 				c = cloth_pos[int(combination[4])]
 				price = food[f] + round(w*water, 2) + round(e*electric, 2) + round(i*internet, 2) + round(c*clothes_wash, 2)
-				writer.writerow([f, w, e, i, c, price])
+				writer.writerow([f, format(w, ".2f"), format(e, ".2f"), format(i, ".2f"), format(c, ".2f"), price])
 				index+=1
 		except TypeError:
 			pass
